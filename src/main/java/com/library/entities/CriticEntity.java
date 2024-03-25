@@ -1,7 +1,10 @@
 package com.library.entities;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -14,4 +17,7 @@ public class CriticEntity {
   
   String firstname;
   String lastname;
+
+  @OneToMany(mappedBy = "critic")
+  List<CommentEntity> comments;
 }

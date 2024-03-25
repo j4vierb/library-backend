@@ -2,6 +2,7 @@ package com.library.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -14,4 +15,7 @@ public class CharacterEntity {
 
   String name;
   String description;
+
+  @ManyToOne
+  BookEntity book;
 }
