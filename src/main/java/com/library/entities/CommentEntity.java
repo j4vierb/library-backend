@@ -6,9 +6,10 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Author {
+public class CommentEntity {
   @Id
-  Long author_id;
-  String firstname;
-  String lastname;
+  Long comment_id;
+
+  String header;
+  String body;
 }
