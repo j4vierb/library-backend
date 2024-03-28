@@ -1,5 +1,6 @@
 package com.library.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -13,10 +14,10 @@ import lombok.Data;
 @Data
 public class EditorialEntity {
   @Id
-  Long editorial_id;
+  Long id;
 
   String name;
 
   @OneToMany(mappedBy = "editorial")
-  List<BookEntity> books;
+  List<BookEntity> books = new ArrayList<>();
 }

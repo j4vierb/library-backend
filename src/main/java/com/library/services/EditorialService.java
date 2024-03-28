@@ -20,8 +20,8 @@ public class EditorialService {
 
   @Transactional
   public EditorialEntity createEditorial(EditorialEntity editorial) {
-    log.info("Creating editorial with id: {}", editorial.getEditorial_id());
-    log.info("Finish creating editorial with id: {}", editorial.getEditorial_id());
+    log.info("Creating editorial with id: {}", editorial.getId());
+    log.info("Finish creating editorial with id: {}", editorial.getId());
     return editorialRepository.save(editorial);
   }
 

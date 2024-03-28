@@ -9,4 +9,5 @@ public class BookDTO {
   private String description;
   private Boolean available;
   private String publicationdate;
+  private EditorialDTO editorial;
 }

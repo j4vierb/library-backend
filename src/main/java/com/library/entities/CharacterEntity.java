@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 public class CharacterEntity {
   @Id
-  Long character_id;
+  Long id;
 
   String name;
   String description;

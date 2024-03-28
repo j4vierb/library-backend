@@ -20,8 +20,8 @@ public class BookService {
 
   @Transactional
   public BookEntity createBook(BookEntity book) {
-    log.info("Creating book with id: {}", book.getBook_id());
-    log.info("Finish creating book with id: {}", book.getBook_id());
+    log.info("Creating book with id: {}", book.getId());
+    log.info("Finish creating book with id: {}", book.getId());
     return bookRepository.save(book);
   }
 

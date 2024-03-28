@@ -20,8 +20,8 @@ public class CommentService {
 
   @Transactional
   public CommentEntity createComment(CommentEntity comment) {
-    log.info("Creating comment with id: {}", comment.getComment_id());
-    log.info("Finish creating comment with id: {}", comment.getComment_id());
+    log.info("Creating comment with id: {}", comment.getId());
+    log.info("Finish creating comment with id: {}", comment.getId());
     return commentRepository.save(comment);
   }
 

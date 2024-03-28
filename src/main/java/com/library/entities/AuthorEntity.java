@@ -1,5 +1,6 @@
 package com.library.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -13,11 +14,11 @@ import lombok.Data;
 @Data
 public class AuthorEntity {
   @Id
-  Long author_id;
+  Long id;
 
   String firstname;
   String lastname;
 
   @ManyToMany(mappedBy = "authors")
-  List<BookEntity> books;
+  List<BookEntity> books = new ArrayList<>();
 }

@@ -1,5 +1,6 @@
 package com.library.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -15,7 +16,7 @@ import lombok.Data;
 @Data
 public class BookEntity {
   @Id
-  Long book_id;
+  Long id;
 
   String title;
   String description;
@@ -23,13 +24,13 @@ public class BookEntity {
   String publicationdate;
 
   @ManyToMany
-  List<AuthorEntity> authors;
+  List<AuthorEntity> authors = new ArrayList<>();
 
   @OneToMany(mappedBy = "book")
-  List<CharacterEntity> characters;
+  List<CharacterEntity> characters = new ArrayList<>();
 
   @OneToMany(mappedBy = "book")
-  List<CommentEntity> comments;
+  List<CommentEntity> comments = new ArrayList<>();
 
   @ManyToOne
   EditorialEntity editorial;

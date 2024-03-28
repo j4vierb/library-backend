@@ -20,8 +20,8 @@ public class CriticService {
 
   @Transactional
   public CriticEntity createCritic(CriticEntity critic) {
-    log.info("Creating critic with id: {}", critic.getCritic_id());
-    log.info("Finish creating critic with id: {}", critic.getCritic_id());
+    log.info("Creating critic with id: {}", critic.getId());
+    log.info("Finish creating critic with id: {}", critic.getId());
     return criticRepository.save(critic);
   }
 

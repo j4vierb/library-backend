@@ -20,8 +20,8 @@ public class AuthorService {
 
   @Transactional
   public AuthorEntity createAuthor(AuthorEntity author) {
-    log.info("Creating author with id: {}", author.getAuthor_id());
-    log.info("Finish creating author with id: {}", author.getAuthor_id());
+    log.info("Creating author with id: {}", author.getId());
+    log.info("Finish creating author with id: {}", author.getId());
     return authorRepository.save(author);
   }
 

@@ -20,8 +20,8 @@ public class CharacterService {
 
   @Transactional
   public CharacterEntity createCharacter(CharacterEntity character) {
-    log.info("Creating character with id: {}", character.getCharacter_id());
-    log.info("Finish creating character with id: {}", character.getCharacter_id());
+    log.info("Creating character with id: {}", character.getId());
+    log.info("Finish creating character with id: {}", character.getId());
     return characterRepository.save(character);
   }
 

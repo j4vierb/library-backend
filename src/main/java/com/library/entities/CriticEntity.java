@@ -1,5 +1,6 @@
 package com.library.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -13,11 +14,11 @@ import lombok.Data;
 @Data
 public class CriticEntity {
   @Id
-  Long critic_id;
+  Long id;
   
   String firstname;
   String lastname;
 
   @OneToMany(mappedBy = "critic")
-  List<CommentEntity> comments;
+  List<CommentEntity> comments = new ArrayList<>();
 }

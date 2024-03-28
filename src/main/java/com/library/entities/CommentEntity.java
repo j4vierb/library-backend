@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 public class CommentEntity {
   @Id
-  Long comment_id;
+  Long id;
 
   String header;
   String body;
