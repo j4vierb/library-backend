@@ -65,6 +65,21 @@ Meanwhile, your dependencies group in `pom.xml` should to be this:
 
 To create the database schema copy the content of `./db/schema.sql`, go to Supabase web page and then, in your project, clic on `SQL Editor`, create a `New query` and paste the content of `schema.sql`. Finally, run it.
 
+## Features
+
+1. Connection to Supabase database.
+2. Entities of the UML model.
+3. Repositories for each entity.
+4. Services for each entity, but not for the relations.
+5. DTO and DetailDTO for each entity.
+
+## Tasks
+
+1. Fix UML model.
+2. Add services for the relations.
+3. Add authentication.
+
 ## Resources
 
 1. [Mapping Objects to Relational Databases](https://agiledata.org/essays/mappingObjects.html)
+
